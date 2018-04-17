@@ -219,7 +219,7 @@ class AmastyAmorderattrOrderAttribute(models.Model):
     """
     Verify doctor is authorized access report
     """
-    entity_id = models.AutoField(primary_key=True)
+    entity_id = models.AutoField('Id',primary_key=True)
     order = models.ForeignKey('SalesFlatOrder', models.DO_NOTHING, unique=True)
     doctor_authorization = models.PositiveIntegerField()
     doctor_not_listed = models.CharField(max_length=255)
